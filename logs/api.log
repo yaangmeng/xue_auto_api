@@ -1,0 +1,17 @@
+2021-08-01 14:56:54,469 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 14:57:44,579 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 14:57:44,579 - tools.log - ERROR - config.ini 文件中不存在section: [te_ur]
+2021-08-01 15:02:54,865 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 15:02:54,865 - tools.log - ERROR - config.ini 文件section: [te_url] 中不存在option: admn
+2021-08-01 15:04:01,999 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 15:04:46,904 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 15:32:39,327 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 15:34:31,092 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 15:39:00,633 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 15:39:08,717 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 15:39:08,717 - tools.log - ERROR - config.ini 文件中不存在section: [te_mal_db]
+2021-08-01 15:41:06,556 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 15:42:17,875 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 16:27:30,836 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 16:35:39,064 - tools.log - INFO - 当前运行环境为：te
+2021-08-01 16:36:34,462 - tools.log - INFO - 当前运行环境为：te
