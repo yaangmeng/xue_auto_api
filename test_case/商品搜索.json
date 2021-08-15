@@ -3,15 +3,12 @@
   "method": "get",
   "url": "/api/v1/search",
   "headers": {
+    "token": "$__GET_VAR(token)$"
   },
   "data": null,
   "params": {
-    "keyword": "",
-    "goodsCategoryId": "${__GET_VAR(商品分类id)}"
+    "keyword": "手机"
   },
-  "json": {
-    "loginName": "13700002703",
-    "passwordMd5": "e10adc3949ba59abbe56e057f20f883e"
-  },
+  "json": null,
   "files": null
 }

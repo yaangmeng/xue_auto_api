@@ -64,7 +64,7 @@ class KeyDriver():
             return data  # 如果为空，直接返回原字符串
         return data.replace(key, res)  # 如果不为空，则使用关键字方法运行结果，替换调原字符串中的关键字
 
-    def __excute_keys(self, key):
+    def __excute_keys(self, send_request, key):
         """
         执行嵌套关键字  $__PHONE($__PHONE()$)$
         :param key:关键字
@@ -74,24 +74,25 @@ class KeyDriver():
         if "$__" in key:  # 判断$__是否在关键字中出现，如果出现，则说明有关键字嵌套的问题
             keys = self.__get_keys_list(key)  # 获取关键字中的嵌套关键字
             for k in keys:
-                res = self.__excute_keys(k)  # 递归调用关键字执行方法
+                res = self.__excute_keys(send_request, k)  # 递归调用关键字执行方法
                 key = self.__replace_key(key, k, res)  # 使用关键字执行结果，替换掉原关键字中的嵌套关键字
         key_name = self.__get_key_name(key)
         key_args = self.__get_key_args(key)
         func_name = key_map[key_name][0]
-        res = func_name(*key_args)  # 列表拆包语法
+        res = func_name(send_request, *key_args)  # 列表拆包语法
         return res
 
-    def excute_keys(self):
+    def excute_keys(self, send_request):
         keys = self.keys
         for k in keys:
             # key_name = self.__get_key_name(k)
             # key_args = self.__get_key_args(k)
             # func_name = key_map[key_name][0]
+            # func_name = key_map[key_name][0]
             # res = func_name(*key_args)  # 列表拆包语法
-            res = self.__excute_keys(k)
+            res = self.__excute_keys(send_request, k)
             self.__data = self.__replace_key(self.__data, k, res)
-            return self.__data
+        return self.__data
 
 
 if __name__ == '__main__':

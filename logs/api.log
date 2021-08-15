@@ -39,3 +39,22 @@
 2021-08-08 16:55:23,764 - tools.log - INFO - 当前运行环境为：te
 2021-08-08 16:55:28,232 - tools.log - INFO - 当前运行环境为：te
 2021-08-08 16:55:28,232 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 11:50:55,992 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 11:50:55,993 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 11:51:57,011 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 11:51:57,011 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 11:53:57,457 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 11:53:57,458 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 11:56:51,941 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 11:56:51,941 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 13:07:19,439 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 13:07:19,440 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 13:09:36,851 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 13:09:36,852 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 13:09:36,928 - tools.log - DEBUG - -------local_vars：{'token': 'fffd3cd7bbeea6ea60934886bfa8c4a7'}
+2021-08-15 13:21:08,783 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 13:21:08,784 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 13:21:08,895 - tools.log - DEBUG - -------local_vars：{'token': 'b210e856c11f87a663d212857c671322'}
+2021-08-15 13:21:08,898 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 13:21:08,899 - tools.log - INFO - 当前运行环境为：te
+2021-08-15 13:21:08,966 - tools.log - DEBUG - -------local_vars：{'token': 'b210e856c11f87a663d212857c671322'}

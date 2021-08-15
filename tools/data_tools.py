@@ -14,7 +14,7 @@ fake = Faker("zh_CN")  # 默认英文，初始化为中文
 """
 
 
-def get_phone_number():
+def get_phone_number(send_request):
     """
     随机生成手机号
     :return:
@@ -22,7 +22,7 @@ def get_phone_number():
     return str(fake.phone_number())
 
 
-def get_string(content, length):
+def get_string(send_request, content, length):
     """
     随机生成指，长度为length，字符在content之中选择的字符串
     :param content:
@@ -34,7 +34,7 @@ def get_string(content, length):
     return "".join(random.choices(content, k=length))
 
 
-def get_random_int(start, end):
+def get_random_int(send_request, start, end):
     """
     随机生成min至max之间的整数
     :param start: 最小值

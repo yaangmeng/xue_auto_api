@@ -7,10 +7,12 @@
   "data": null,
   "params": null,
   "json": {
-    "loginName": "$__PHONE()$",
+    "loginName": "13700002703",
     "passwordMd5": "e10adc3949ba59abbe56e057f20f883e"
   },
   "files": null,
   "pre_pocess": [],
-  "post_process": []
+  "post_process": [
+    "$__JSON_EXTRACTOR(token,$.data,0)$"
+  ]
 }
