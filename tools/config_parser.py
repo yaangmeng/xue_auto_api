@@ -37,7 +37,7 @@ class ParserConfig():
         """
         # section = f"{self.env}_url"
         section = f"{self.env}_url"
-        return self.__get_config(section, app)
+        return self.__get_config(section, app).rstrip("/")
 
     def __get_config(self, section, option):
         """

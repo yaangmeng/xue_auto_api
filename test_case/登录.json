@@ -1,0 +1,16 @@
+{
+  "service": "mall",
+  "method": "post",
+  "url": "/api/v1/user/login",
+  "headers": {
+  },
+  "data": null,
+  "params": null,
+  "json": {
+    "loginName": "$__PHONE()$",
+    "passwordMd5": "e10adc3949ba59abbe56e057f20f883e"
+  },
+  "files": null,
+  "pre_pocess": [],
+  "post_process": []
+}
