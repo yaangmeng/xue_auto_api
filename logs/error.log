@@ -1,3 +1,0 @@
-2021-08-01 14:57:44,579 - tools.log - ERROR - config.ini 文件中不存在section: [te_ur]
-2021-08-01 15:02:54,865 - tools.log - ERROR - config.ini 文件section: [te_url] 中不存在option: admn
-2021-08-01 15:39:08,717 - tools.log - ERROR - config.ini 文件中不存在section: [te_mal_db]
