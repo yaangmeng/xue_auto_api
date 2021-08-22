@@ -4,19 +4,17 @@
   "title": "第一步、注册",
   "service": "mall",
   "method": "get",
-  "url": "/api/v1/search",
+  "url": "/api/v1/address",
   "headers": {
     "token": "$__GET_VAR(token)$"
   },
   "data": null,
-  "params": {
-    "keyword": "手机"
-  },
+  "params":null,
   "json": null,
   "files": null,
   "post_process": [
-    "$__ASSERT_JSON({\"resultCode\":200})$",
-    "$__JSON_EXTRACTOR(goodsId,$.data.list[*].goodsId,0)$"
+    "$__JSON_EXTRACTOR(addressId,$.data[*].addressId,1)$",
+    "$__ASSERT_JSON({\"resultCode\":200})$"
   ],
   "pre_process": [
   ]

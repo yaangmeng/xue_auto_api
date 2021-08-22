@@ -1,21 +1,21 @@
 {
   "feature": "流程用例",
   "story": "新用户下单流程",
-  "title": "第一步、登录",
+  "title": "第一步、注册",
   "service": "mall",
   "method": "post",
-  "url": "/api/v1/user/login",
+  "url": "/api/v1/shop-cart",
   "headers": {
+    "token": "$__GET_VAR(token)$"
   },
   "data": null,
   "params": null,
   "json": {
-    "loginName": "$__GET_VAR(phone)$",
-    "passwordMd5": "e10adc3949ba59abbe56e057f20f883e"
-  },
+  "goodsCount": 1,
+  "goodsId": "$__GET_VAR(goodsId)$"
+},
   "files": null,
   "post_process": [
-    "$__JSON_EXTRACTOR(token,$.data,0)$",
     "$__ASSERT_JSON({\"resultCode\":200})$"
   ],
   "pre_process": [

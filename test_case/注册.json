@@ -1,23 +1,22 @@
 {
   "feature": "流程用例",
   "story": "新用户下单流程",
-  "title": "第一步、登录",
+  "title": "第一步、注册",
   "service": "mall",
   "method": "post",
-  "url": "/api/v1/user/login",
-  "headers": {
-  },
+  "url": "/api/v1/user/register",
+  "headers": null,
   "data": null,
   "params": null,
   "json": {
-    "loginName": "$__GET_VAR(phone)$",
-    "passwordMd5": "e10adc3949ba59abbe56e057f20f883e"
+  "loginName": "$__GET_VAR(phone)$",
+  "password": "123456"
   },
   "files": null,
   "post_process": [
-    "$__JSON_EXTRACTOR(token,$.data,0)$",
     "$__ASSERT_JSON({\"resultCode\":200})$"
   ],
   "pre_process": [
+    "$__SET_VAR(phone,$__PHONE()$)$"
   ]
 }

@@ -4,18 +4,20 @@
   "title": "第一步、登录",
   "service": "mall",
   "method": "post",
-  "url": "/api/v1/user/login",
+  "url": "/api/v1/saveOrder",
   "headers": {
+    "token": "$__GET_VAR(token)$"
   },
   "data": null,
   "params": null,
   "json": {
-    "loginName": "$__GET_VAR(phone)$",
-    "passwordMd5": "e10adc3949ba59abbe56e057f20f883e"
-  },
+  "addressId": "$__GET_VAR(addressId)$",
+  "cartItemIds": [
+    "$__GET_VAR(cartItemId)$"
+  ]
+},
   "files": null,
   "post_process": [
-    "$__JSON_EXTRACTOR(token,$.data,0)$",
     "$__ASSERT_JSON({\"resultCode\":200})$"
   ],
   "pre_process": [

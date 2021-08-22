@@ -62,7 +62,7 @@ class KeyDriver():
         """
         if res is None:  # 判断res是否为空
             return data  # 如果为空，直接返回原字符串
-        return data.replace(key, res)  # 如果不为空，则使用关键字方法运行结果，替换调原字符串中的关键字
+        return data.replace(key, str(res))  # 如果不为空，则使用关键字方法运行结果，替换调原字符串中的关键字
 
     def __excute_keys(self, send_request, key):
         """

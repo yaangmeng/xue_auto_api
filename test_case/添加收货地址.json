@@ -4,18 +4,23 @@
   "title": "第一步、登录",
   "service": "mall",
   "method": "post",
-  "url": "/api/v1/user/login",
+  "url": "/api/v1/address",
   "headers": {
+    "token": "$__GET_VAR(token)$"
   },
   "data": null,
   "params": null,
-  "json": {
-    "loginName": "$__GET_VAR(phone)$",
-    "passwordMd5": "e10adc3949ba59abbe56e057f20f883e"
-  },
+  "json":{
+  "cityName": "上海市",
+  "defaultFlag": 0,
+  "detailAddress": "唐镇",
+  "provinceName": "上海",
+  "regionName": "浦东",
+  "userName": "小明",
+  "userPhone": "$__GET_VAR(phone)$"
+},
   "files": null,
   "post_process": [
-    "$__JSON_EXTRACTOR(token,$.data,0)$",
     "$__ASSERT_JSON({\"resultCode\":200})$"
   ],
   "pre_process": [

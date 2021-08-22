@@ -4,7 +4,7 @@
   "title": "第一步、注册",
   "service": "mall",
   "method": "get",
-  "url": "/api/v1/search",
+  "url": "/api/v1/shop-cart",
   "headers": {
     "token": "$__GET_VAR(token)$"
   },
@@ -16,7 +16,7 @@
   "files": null,
   "post_process": [
     "$__ASSERT_JSON({\"resultCode\":200})$",
-    "$__JSON_EXTRACTOR(goodsId,$.data.list[*].goodsId,0)$"
+    "$__JSON_EXTRACTOR(cartItemId,$.data[*].cartItemId,1)$"
   ],
   "pre_process": [
   ]
