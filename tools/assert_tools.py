@@ -42,5 +42,4 @@ def assert_true(result, failed="", sucess=""):
         assert result, failed
 
 
-if __name__ == '__main__':
-    assert_json(None, '{"resultCode": 200', '"message":"登录失败"}')
+
