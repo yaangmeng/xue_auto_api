@@ -9,11 +9,7 @@ from common.send_request import SendRequest
 
 def test_login():
     res = SendRequest().send_request("test_case/登录.json")
-    print(res.http_request)
-    print(res.http_response)
 
 
 def test_search():
     res = SendRequest().send_request("test_case/商品搜索.json")
-    print(res.http_request)
-    print(res.http_response)

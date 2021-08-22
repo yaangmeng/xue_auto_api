@@ -1,4 +1,7 @@
 {
+  "feature": "流程用例",
+  "story": "新用户下单流程",
+  "title": "第一步、登录",
   "service": "mall",
   "method": "post",
   "url": "/api/v1/user/login",
@@ -7,12 +10,16 @@
   "data": null,
   "params": null,
   "json": {
-    "loginName": "13700002703",
+    "loginName": "$__PHONE()$",
     "passwordMd5": "e10adc3949ba59abbe56e057f20f883e"
   },
   "files": null,
-  "pre_pocess": [],
   "post_process": [
-    "$__JSON_EXTRACTOR(token,$.data,0)$"
+    "$__JSON_EXTRACTOR(token,$.data,0)$",
+    "$__ASSERT_JSON({\"resultCode\":500,\"message\":\"登录失败！\"})$"
+  ],
+  "pre_process": [
+    "$__GET_VAR(变量名)$",
+    "$__SET_VAR(phone,$__PHONE()$)$"
   ]
 }

@@ -44,7 +44,24 @@ class JsonData():
             self.__service = json_dict.pop("service", None)  # 使用字典的get方法获取service的值，如果获取不到，则给默认值None
             self.__pre_process = json_dict.pop("pre_process", [])  # 请求发送之前的关键字列表
             self.__post_process = json_dict.pop("post_process", [])  # 请求收到响应之后的关键字列表
+            self.__allure = {}
+            self.__allure.update(self.__get_value(json_dict, "feature"))
+            self.__allure.update(self.__get_value(json_dict, "story"))
+            self.__allure.update(self.__get_value(json_dict, "title"))
             self.__request = json_dict  # 剩余的存入__request属性中
+
+    def __get_value(self, d, key):
+        """
+        判断key是否再d中存在，如果在则返回对应的key和value，如果不在，则返回一个{}
+        :param d:
+        :param key:
+        :return:
+        """
+        if key not in d:
+            return {}
+        a = {}
+        a[key] = d.pop(key)
+        return a
 
     @property
     def config(self):
@@ -66,6 +83,10 @@ class JsonData():
     @property
     def pre_process(self):  # 只读属性
         return self.__pre_process
+
+    @property
+    def allure(self):  # 只读属性
+        return self.__allure
 
 
 if __name__ == '__main__':
