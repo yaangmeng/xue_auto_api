@@ -5,6 +5,7 @@
 # 创建时间: 2021/8/8 14:49
 from tools.assert_tools import assert_json
 from tools.data_tools import get_phone_number, get_string, get_random_int
+from tools.md5 import md5_passwd
 from tools.mysql_tools import mysql_db
 from tools.response_tools import json_axtractor
 from tools.vars_tools import get_var, set_var
@@ -20,4 +21,5 @@ key_map = {
     "MYSQL_DB": [mysql_db, "执行sql语句关键字，sql语句必须以英文分号结尾 用法示例：$__MYSQL_DB(sql,变量名,应用名)$"],
     "ASSERT_JSON": [assert_json, "根据json预期结果判断响应正文中数据的正确性 用法示例：$__ASSERT_JSON(预期结果json)$"],
     "SET_VAR": [set_var, "把变量值存入指定变量中 用法示例：$__SET_VAR(变量名,变量值)$"],
+    "MD5_PASSWD":[md5_passwd,"将密码转换成MD5 用法示例:$__MD5_PASSWD(需要转换的值)$"]
 }
